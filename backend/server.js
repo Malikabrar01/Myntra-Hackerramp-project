@@ -10,19 +10,16 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import userRoutes from './routes/userRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
 
-dotenv.config()
+dotenv.config({ path: './backend/.env' })
 
 connectDB()
 
-const app=express();
+const app = express()
 app.use(express.json())
-
-
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
-
 
 app.use('/api/products', productRoutes)
 app.use('/api/users', userRoutes)
@@ -48,14 +45,13 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-
-
 app.use(notFound)
 app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 
-app.listen(
-  PORT,
-  console.log( `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold)
-)
+app.listen(PORT, () => {
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+  )
+})

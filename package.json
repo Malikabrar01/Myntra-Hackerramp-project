@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HritikRaj007/My-Shop.git"
+    "url": "git+https://github.com/Malikabrar01/Myntra-Hackerramp-project.git"
   },
-  "author": "Hritik Raj",
+  "author": "Malikabrar01",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HritikRaj007/My-Shop/issues"
+    "url": "https://github.com/Malikabrar01/Myntra-Hackerramp-project/issues"
   },
-  "homepage": "https://github.com/HritikRaj007/My-Shop#readme",
+  "homepage": "https://github.com/Malikabrar01/Myntra-Hackerramp-project#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
